@@ -36,27 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.card-wrapper{
-  margin: 40px 20%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.price-card{
-  border: 0.5px solid rgb(214, 214, 214);
-  border-radius: 10px;
-  width: 45%;
-  height: 300px;
-  transition: 0.3s;
-}
-
-.price-card:hover {
-  transform: translate(0, -10px);
-  box-shadow: rgba(149, 255, 207, 0.12) 0px 2px 4px 0px, rgba(41, 252, 164, 0.32) 0px 2px 16px 0px;
-}
-
-.draw-line{
-  border-bottom: 1px solid rgb(227, 227, 227);
-  width: 100%;
-}

@@ -1,0 +1,67 @@
+.price_card {
+  border: 0.5px solid rgb(214, 214, 214);
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.price_card h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  /* Gray/900 */
+  color: #101828;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.price_card h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+
+  /* Gray/900 */
+  color: #101828;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.price_card p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  /* Gray/600 */
+  color: #475467;
+  margin: 0;
+}
+
+.price_card button {
+  margin-top: 32px;
+  width: 85%;
+  background: #34cb65;
+  border: 1px solid #34cb65;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  height: 56px;
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.price_card .seperator {
+  border: 1px solid #e5e5e5;
+  width: 85%;
+  margin: 32px 7.5%;
+}

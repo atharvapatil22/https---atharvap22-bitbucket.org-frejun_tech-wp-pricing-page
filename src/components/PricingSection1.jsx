@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceCard from "./PriceCard/PriceCard.jsx";
 import styles from "./Pricing.module.css";
-import ReactSelectMaterialUi from "react-select-material-ui";
+import RadioSlider from "./RadioSlider/RadioSlider";
 
 function PricingSection1({ priceTable }) {
   // const [selectedCountry, setSelectedCountry] = useState("India");
@@ -21,6 +22,8 @@ function PricingSection1({ priceTable }) {
 
   const [virtualNumber, setVirtualNumber] = useState("USA");
   const [usersQuantity, setUsersQuantity] = useState("bracket_2");
+  const [currency, setCurrency] = useState("INR");
+  const [billingCycle, setBillingCycle] = useState("Monthly");
 
   return (
     <div>
@@ -56,80 +59,37 @@ function PricingSection1({ priceTable }) {
         </div>
       </div>
 
-      {/* Country */}
-      {/* <h3>Select country:</h3>
-      <select
-        name="country"
-        value={selectedCountry}
-        onChange={(e) => {
-          setSelectedCountry(e.target.value);
-          setSelectedCountryData(
-            priceTable.filter((country) => country.name === e.target.value)[0]
-          );
-        }}
-      >
-        {priceTable.map((country, index) => (
-          <option value={country.name} key={index}>
-            {country.name}
-          </option>
-        ))}
-      </select>
+      <div className={styles.comparison_cards}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <RadioSlider
+            options={["INR", "USD", "EUR", "GBP", "AUD"]}
+            value={currency}
+            onChange={(newVal) => setCurrency(newVal)}
+            containerStyle={{ width: "345px" }}
+          />
 
-      {/* Billing cycle 
-      <h3>Select billing cycle:</h3>
-      <form>
-        <div className="radio">
-          <label>
-            <input
-              type="radio"
-              value="M"
-              onChange={(e) => setSelectedCycle("M")}
-              checked={selectedCycle === "M"}
-            />
-            Monthly
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input
-              type="radio"
-              value="A"
-              onChange={(e) => setSelectedCycle("A")}
-              checked={selectedCycle === "A"}
-            />
-            Annually
-          </label>
-        </div>
-      </form>
-
-      <div className="card-wrapper">
-        {/* Card 1 
-        <div className="price-card">
-          <h4>Standard</h4>
-          <h3 style={{ color: "grey" }}>
-            {selectedCycle === "M"
-              ? selectedCountryData.monthly.basic
-              : selectedCountryData.annually.basic}
-          </h3>
-          <h5>per user per month</h5>
-          <div className="draw-line" />
-          <p>~features list</p>
+          <RadioSlider
+            options={["Monthly", "Annual (Save 15%)"]}
+            value={billingCycle}
+            onChange={(newVal) => setBillingCycle(newVal)}
+            containerStyle={{ width: "279px" }}
+          />
         </div>
 
-        {/* Card 2 
-        <div className="price-card">
-          <h4>Professional</h4>
-          <h3 style={{ color: "grey" }}>
-            {selectedCycle === "M"
-              ? selectedCountryData.monthly.pro
-              : selectedCountryData.annually.pro}
-          </h3>
-          <h5>per user per month</h5>
-
-          <div className="draw-line" />
-          <p>~features list</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "32px",
+            marginTop: "40px",
+          }}
+        >
+          <PriceCard type="STANDARD" />
+          <PriceCard type="PROFESSIONAL" />
         </div>
-      </div> */}
+
+        <button>Compare plans</button>
+      </div>
     </div>
   );
 }

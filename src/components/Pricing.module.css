@@ -75,6 +75,30 @@
   font-family: "Poppins";
 }
 
+.comparison_cards {
+  margin: 56px 15vw 0 15vw;
+}
+
+.comparison_cards button {
+  width: 480px;
+  height: 56px;
+
+  background: #ffffff;
+  border: 1px solid #34cb65;
+
+  /* Shadow/xs */
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #34cb65;
+  margin-top: 56px;
+  cursor: pointer;
+}
+
 @media screen and (max-device-width: 720px) {
   .banner h1 {
     font-size: 38px;
