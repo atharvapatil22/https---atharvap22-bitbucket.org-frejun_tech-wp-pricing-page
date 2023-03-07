@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.banner {
+.pricing_banner {
   /* height: 394px; */
   height: 294px;
 
@@ -8,7 +8,7 @@
   padding-top: 100px;
 }
 
-.banner h1 {
+.pricing_banner h1 {
   width: 100%;
   margin: 0;
   font-family: "Poppins";
@@ -23,7 +23,7 @@
   transition: all 0.3s;
 }
 
-.banner h3 {
+.pricing_banner h3 {
   margin: 0;
   /* position: absolute; */
   width: 100%;
@@ -75,11 +75,11 @@
   font-family: "Poppins";
 }
 
-.comparison_cards {
+.pricing_body {
   margin: 56px 15vw 0 15vw;
 }
 
-.comparison_cards button {
+.pricing_body button {
   width: 480px;
   height: 56px;
 
@@ -99,20 +99,29 @@
   cursor: pointer;
 }
 
+.add_ons h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  color: #000000;
+}
+
 @media screen and (max-device-width: 720px) {
-  .banner h1 {
+  .pricing_banner h1 {
     font-size: 38px;
   }
-  .banner h3 {
+  .pricing_banner h3 {
     font-size: 16px;
   }
 }
 
 @media screen and (max-device-width: 480px) {
-  .banner h1 {
+  .pricing_banner h1 {
     font-size: 32px;
   }
-  .banner h3 {
+  .pricing_banner h3 {
     font-size: 12px;
   }
 }

@@ -1,12 +1,10 @@
-import './App.css';
-import Pricing from './Pricing';
+import "./App.css";
+import Pricing from "./screens/Pricing/Pricing";
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-      </header> */}
-      <Pricing/>
+      <Pricing />
     </div>
   );
 }

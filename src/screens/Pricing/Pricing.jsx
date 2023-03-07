@@ -1,24 +1,44 @@
 import React, { useState } from "react";
-import PriceCard from "./PriceCard/PriceCard.jsx";
+import PriceCard from "../../components/PriceCard/PriceCard";
+import RadioSlider from "../../components/RadioSlider/RadioSlider";
 import styles from "./Pricing.module.css";
-import RadioSlider from "./RadioSlider/RadioSlider";
 
-function PricingSection1({ priceTable }) {
-  // const [selectedCountry, setSelectedCountry] = useState("India");
-  // const [selectedCountryData, setSelectedCountryData] = useState({
-  //   name: "India",
-  //   monthly: {
-  //     basic: "1200 ₹",
-  //     pro: "1600 ₹",
+function Pricing() {
+  // const pricingData = [
+  //   {
+  //     name: "India",
+  //     monthly: {
+  //       basic: "1200 ₹",
+  //       pro: "1600 ₹",
+  //     },
+  //     annually: {
+  //       basic: "1000 ₹",
+  //       pro: "1400 ₹",
+  //     },
   //   },
-  //   annually: {
-  //     basic: "1000 ₹",
-  //     pro: "1400 ₹",
+  //   {
+  //     name: "USA",
+  //     monthly: {
+  //       basic: "80 $",
+  //       pro: "60 $",
+  //     },
+  //     annually: {
+  //       basic: "65 $",
+  //       pro: "45 $",
+  //     },
   //   },
-  // });
-  // const [selectedCycle, setSelectedCycle] = useState("M");
-
-  //
+  //   {
+  //     name: "UK",
+  //     monthly: {
+  //       basic: "50 £",
+  //       pro: "60 £",
+  //     },
+  //     annually: {
+  //       basic: "40 £",
+  //       pro: "50 £",
+  //     },
+  //   },
+  // ];
 
   const [virtualNumber, setVirtualNumber] = useState("USA");
   const [usersQuantity, setUsersQuantity] = useState("bracket_2");
@@ -27,7 +47,7 @@ function PricingSection1({ priceTable }) {
 
   return (
     <div>
-      <div className={styles.banner}>
+      <div className={styles.pricing_banner}>
         <h1>Simple and fair pricing</h1>
         <h3>No long term contracts. Pay as you go.</h3>
         <div className={styles.select_container}>
@@ -59,7 +79,7 @@ function PricingSection1({ priceTable }) {
         </div>
       </div>
 
-      <div className={styles.comparison_cards}>
+      <div className={styles.pricing_body}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <RadioSlider
             options={["INR", "USD", "EUR", "GBP", "AUD"]}
@@ -89,9 +109,19 @@ function PricingSection1({ priceTable }) {
         </div>
 
         <button>Compare plans</button>
+
+        <div style={{ border: "1px solid #E1E5E2", margin: "64px 0 80px 0" }} />
+
+        <div className={styles.add_ons}>
+          <h3>Add-ons</h3>
+        </div>
+
+        <div className={styles.add_ons}>
+          <h3>Call & SMS charges</h3>
+        </div>
       </div>
     </div>
   );
 }
 
-export default PricingSection1;
+export default Pricing;
